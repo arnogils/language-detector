@@ -1,5 +1,6 @@
 import unittest
 
+from language_detector import LanguageDetector
 
 class LanguageDetectorTests(unittest.TestCase):
 

@@ -1,5 +1,6 @@
 import unittest
 
+from language import Language
 
 class LanguageTests(unittest.TestCase):
 
