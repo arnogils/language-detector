@@ -1,5 +1,7 @@
 """Simple implementation of a language detector"""
 
+import os
+from io import open
 from language import Language
 
 
@@ -29,11 +31,18 @@ class LanguageDetector:
         return max(matches, key=lambda k: len(matches[k]))
 
     def guess_from_files(self, directory):
-        raise NotImplementedError
+        """Read messages from a directory and guess their language
+        using the guess_language method.
+
+        Args:
+            Directory: the directory containing the messages.
+
+        Prints:
+            The detected language for each file in the directory.
+        """
+        for message in os.listdir(directory):
+            with open(message, mode='rt', encoding='utf-8') as f:
+                print self.guess_language(message)
 
     def guess_from_string(self, message):
         raise NotImplementedError
-
-if __name__ == "__main__":
-    x = LanguageDetector()
-    print(x.guess_language('the de het'))
