@@ -28,12 +28,12 @@ class LanguageDetector:
             return 'Language not detected'
         return max(matches, key=lambda k: len(matches[k]))
 
-    def guess_from_string(self):
+    def guess_from_files(self, directory):
         raise NotImplementedError
 
-    def guess_from_files(self):
+    def guess_from_string(self, message):
         raise NotImplementedError
 
 if __name__ == "__main__":
     x = LanguageDetector()
-    print(x.guess_language('the'))
+    print(x.guess_language('the de het'))

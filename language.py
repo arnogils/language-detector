@@ -1,4 +1,6 @@
-"""Rough representation of a language model"""
+"""Rough representation of a language model.
+Properties are used to streamline the initialization process.
+"""
 
 from io import open
 
