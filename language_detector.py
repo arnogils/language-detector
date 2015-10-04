@@ -45,4 +45,5 @@ class LanguageDetector:
                 print self.guess_language(message)
 
     def guess_from_string(self, message):
-        raise NotImplementedError
+        result = self.guess_language(message)
+        print result
