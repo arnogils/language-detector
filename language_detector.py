@@ -21,15 +21,19 @@ class LanguageDetector:
         """
         matches = {}
         for language in self._languages:
-            result = set(message.lower().split()) & message.keywords
+            result = set(message.lower().split()) & language.keywords
             if result:
                 matches[language.name] = result
         if not matches:
             return 'Language not detected'
-        return matches
+        return max(matches, key=lambda k: len(matches[k]))
 
     def guess_from_string(self):
         raise NotImplementedError
 
     def guess_from_files(self):
         raise NotImplementedError
+
+if __name__ == "__main__":
+    x = LanguageDetector()
+    print(x.guess_language('the'))
