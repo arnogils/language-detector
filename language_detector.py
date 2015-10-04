@@ -51,6 +51,7 @@ class LanguageDetector:
             Message: a message in string format.
 
         Returns:
-            A string containing the detected language of the message.        """
+            A string containing the detected language of the message.
+        """
         result = self.guess_language(message)
         print result
