@@ -1,2 +1,2 @@
 # language-detector
-Simple language detector i made as part of a programming assignment
+Simple implementation of a language detector based on keyword matching.
