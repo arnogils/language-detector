@@ -45,5 +45,12 @@ class LanguageDetector:
                 print self.guess_language(message)
 
     def guess_from_string(self, message):
+        """Guess the language of a specific message
+
+        Args:
+            Message: a message in string format.
+
+        Returns:
+            A string containing the detected language of the message.        """
         result = self.guess_language(message)
         print result
