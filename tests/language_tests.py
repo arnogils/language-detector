@@ -1,11 +1,11 @@
 import unittest
-
 from language import Language
+
 
 class LanguageTests(unittest.TestCase):
 
     def setUp(self):
-        pass
+        raise NotImplementedError
 
     def tearDown(self):
-        pass
+        raise NotImplementedError
