@@ -11,7 +11,10 @@ class LanguageTests(unittest.TestCase):
         self.assertRaises(ValueError, Language, 'dutch', '../language_files/nl.txt')
 
     def test_name_must_be_string(self):
-        self.assertRaises(ValueError, Language, '12345', '../language_files/nl.txt')
+        self.assertRaises(AttributeError, Language, 10, '../language_files/nl.txt')
+
+    def test_name_must_alpha(self):
+        self.assertRaises(ValueError, Language, '1234', 'language_files/nl.txt')
 
     def test_invalid_language_file(self):
         self.assertRaises(IOError, Language, 'Dutch', '')
