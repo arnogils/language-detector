@@ -8,9 +8,9 @@ from language import Language
 class LanguageDetector:
 
     def __init__(self):
-        self._languages = [Language('English', 'language_files/en.txt'),
-                           Language('Dutch', 'language_files/nl.txt'),
-                           Language('German', 'language_files/de.txt')]
+        self._languages = [Language('English', '../language_files/en.txt'),
+                           Language('Dutch', '../language_files/nl.txt'),
+                           Language('German', '../language_files/de.txt')]
 
     def guess_language(self, message):
         """Rough implementation of a language guessing algorithm.
