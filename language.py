@@ -17,11 +17,11 @@ class Language(object):
 
     @name.setter
     def name(self, language):
-        if not language.isalpha():
-            raise ValueError('Invalid language name')
-
         if not isinstance(language, str):
             raise ValueError('Language must be string')
+
+        if not language.isalpha():
+            raise ValueError('Invalid language name')
 
         if not language[0].isupper():
             raise ValueError('Language must start with a capital')
