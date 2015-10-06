@@ -1,5 +1,4 @@
 import unittest
-import time
 from language import Language
 
 
@@ -15,7 +14,7 @@ class LanguageTests(unittest.TestCase):
         self.assertRaises(ValueError, Language, 10, '../language_files/nl.txt')
 
     def test_name_must_be_alpha(self):
-        self.assertRaises(ValueError, Language, '1234', 'language_files/nl.txt')
+        self.assertRaises(ValueError, Language, '1234', '../language_files/nl.txt')
 
     def test_invalid_language_file(self):
         self.assertRaises(IOError, Language, 'Dutch', '')
