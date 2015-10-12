@@ -23,4 +23,4 @@ class LanguageDetectorTests(unittest.TestCase):
         self.assertEqual('German', self.detector.guess_language(message))
 
     def tearDown(self):
-        print "Finished test {0}".format(self._testMethodName)
+        print "Finished {0}".format(self._testMethodName)

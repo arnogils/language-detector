@@ -29,4 +29,4 @@ class LanguageTests(unittest.TestCase):
         self.assertGreater(len(self.language.keywords), 0)
 
     def tearDown(self):
-        print "Finished test {0}".format(self._testMethodName)
+        print "Finished {0}".format(self._testMethodName)
